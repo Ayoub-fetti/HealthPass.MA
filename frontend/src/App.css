@@ -1,0 +1,381 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+  background: #f8f9fb;
+  min-height: 100vh;
+  color: #2c3e50;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Modernized header with clean white background and subtle shadow */
+.header {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: none;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.header nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Updated navigation styling with modern blue accent */
+.header nav a {
+  color: #1e40af;
+  text-decoration: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 8px;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.header nav a:hover {
+  background: #dbeafe;
+  transform: translateY(-1px);
+}
+
+.main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Clean white form containers with minimal shadows */
+.form-container {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0f4f8;
+  margin-bottom: 1.5rem;
+}
+
+.form-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #1e3a8a;
+  text-align: center;
+  font-weight: 600;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #475569;
+  font-size: 0.875rem;
+}
+
+/* Modern input styling with subtle borders and focus states */
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.875rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: #ffffff;
+  color: #2c3e50;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background: #ffffff;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+/* Modern button with solid blue background */
+.btn {
+  background: #3b82f6;
+  color: white;
+  padding: 0.875rem 1.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Updated danger button styling */
+.btn-danger {
+  background: #ef4444;
+}
+
+.btn-danger:hover {
+  background: #dc2626;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.qr-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0f4f8;
+}
+
+.qr-section h2 {
+  margin-bottom: 1.5rem;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.qr-section canvas {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  background: #f8f9fb;
+}
+
+.scanner-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0f4f8;
+  margin-bottom: 1.5rem;
+}
+
+.scanner-section h2 {
+  color: #1e3a8a;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Updated consent card with blue accent border */
+.consent-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0f4f8;
+  border-left: 4px solid #3b82f6;
+  margin-bottom: 1rem;
+}
+
+.consent-card h3 {
+  color: #1e3a8a;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.consent-card h4 {
+  color: #334155;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.consent-card p {
+  color: #64748b;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Updated patient info styling */
+.patient-info {
+  background: #eff6ff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 4px solid #3b82f6;
+  color: #1e40af;
+}
+
+.patient-info p {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn-group .btn {
+  flex: 1;
+  margin-top: 0;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .app {
+    padding: 2rem;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+
+  .header h1 {
+    font-size: 2.2rem;
+  }
+
+  .header nav a {
+    font-size: 1rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: 1 / -1;
+  }
+
+  .btn-group {
+    justify-content: center;
+  }
+
+  .btn-group .btn {
+    flex: none;
+    width: auto;
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 0.5rem;
+  }
+
+  .header {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .header nav {
+    justify-content: center;
+  }
+
+  .header nav a {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .form-container,
+  .qr-section,
+  .scanner-section,
+  .consent-card {
+    padding: 1.5rem;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 16px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-container,
+.qr-section,
+.scanner-section,
+.consent-card {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.btn:focus,
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(59, 130, 246, 0.2);
+  border-radius: 50%;
+  border-top-color: #3b82f6;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
